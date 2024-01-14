@@ -1,13 +1,4 @@
 # Test your FastAPI endpoints
-
-GET http://127.0.0.1:15001/
-Accept: application/json
-
-###
-
-GET http://127.0.0.1:15001/hello/User
-Accept: application/json
-
 ###
 POST http://127.0.0.1:15001/embedtext
 Content-Type: application/json
