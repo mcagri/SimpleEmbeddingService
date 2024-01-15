@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from Model import ModelHandler
+import uvicorn
 app = FastAPI()
 
 
@@ -13,3 +14,7 @@ async def get_text_embedding(obj: dict,):
         return obj
     except AssertionError:
         return {"message": "invalid parameter, correct format: {id:id_val, text:text_val}"}
+
+
+if __name__ == '__main__':
+    uvicorn.run(app, port=15001, host="0.0.0.0")
